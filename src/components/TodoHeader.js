@@ -1,5 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
+import { useTodoState } from '../TodoContext';
 
 const TodoHeaderBlock = styled.div`
   padding: 48px 32px 32px 24px;
@@ -24,6 +25,8 @@ const TodoHeaderBlock = styled.div`
 `;
 
 function TodoHeader() {
+  const todos = useTodoState();
+  console.log(todos);
   return (
     <TodoHeaderBlock>
       <h1>2022년 8월 17일</h1>
